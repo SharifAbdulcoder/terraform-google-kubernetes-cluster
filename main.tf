@@ -4,7 +4,7 @@ resource "google_container_cluster" "default" {
     subnetwork          = "${var.subnetwork}"
     zone                = "${var.zone}"
 
-   additional_zones     = "${var.additional_zones}"
+    additional_zones     = "${var.additional_zones}"
 
     master_auth {
         username        = "${var.username}"
