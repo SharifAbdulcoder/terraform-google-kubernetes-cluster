@@ -4,13 +4,10 @@ resource "google_container_cluster" "default" {
     subnetwork          = "${var.subnetwork_name}"
     zone                = "${var.zone}"
 
-#   additional_zones = [
-#     "us-central1-b",
-#     "us-central1-c",
-#   ]
+   additional_zones     = "${var.additional_zones}"
 
     master_auth {
-        username        = "${length(var.password) > 0 ? var.username : "admin"}"
+        username        = "${var.username}"
         password        = "${length(var.password) > 0 ? var.password : random_string.password.result}"
     }
 
