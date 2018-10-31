@@ -1,34 +1,43 @@
 
-variable "cluster_name" {
-    type    = "string"
+variable "name" {
+    type        = "string"
+    description = "The cluster name."
 }
-variable "network_name" {
-    type    = "string"
+variable "network" {
+    type        = "string"
+    description = ""
 }
-variable "subnetwork_name" {
-    type    = "string"
+variable "subnetwork" {
+    type        = "string"
+    description = ""
 }
 variable "zone" {
-    type    = "string"
+    type        = "string"
+    description = ""
 }
 variable "additional_zones" {
-    type    = "list"
-    default = []
+    type        = "list"
+    description = ""
+    default     = []
+    
 }
 variable "username" {
-    type    = "string"
-    default = "admin"
+    type        = "string"
+    description = ""
+    default     = "admin"
 }
 variable "password" {
-    type    = "string"
-    default = ""
+    type        = "string"
+    description = ""
+    default     = ""
 }
-
 variable "initial_node_count" {
-    type    = "string"
-    default = "1"
+    type        = "string"
+    description = ""
+    default     = "1"
 }
 variable "machine_type" {
-    type    = "string"
-    default = "n1-standard-1"
+    type        = "string"
+    description = "The machine type of the cluster's nodes"
+    default     = "n1-standard-1"
 }
