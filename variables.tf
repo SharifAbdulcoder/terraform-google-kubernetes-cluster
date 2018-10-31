@@ -17,7 +17,7 @@ variable "additional_zones" {
 }
 variable "username" {
     type    = "string"
-    default = ""
+    default = "admin"
 }
 variable "password" {
     type    = "string"
