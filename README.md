@@ -5,7 +5,7 @@ Use this Terraform module to easily create a Kubernetes cluster on Google Cloud 
 
 ```ruby
 module "my-cluster" {
-    name        = "my-cluster"
+    name                = "my-cluster"
     
     network             = "default"
     subnetwork          = "us-central1"
