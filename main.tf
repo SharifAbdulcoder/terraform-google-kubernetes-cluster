@@ -1,7 +1,7 @@
 resource "google_container_cluster" "default" {
-    name                = "${var.cluster_name}"
-    network             = "${var.network_name}"
-    subnetwork          = "${var.subnetwork_name}"
+    name                = "${var.name}"
+    network             = "${var.network}"
+    subnetwork          = "${var.subnetwork}"
     zone                = "${var.zone}"
 
    additional_zones     = "${var.additional_zones}"
